@@ -93,11 +93,14 @@ resource "aws_security_group" "public_sg" {
   }
 }
 
+variable "ssh_public_key" {
+  type = string
+}
 
 #cheia privata pt conectare ssh la ec2 ubuntu
 resource "aws_key_pair" "my_key" {
   key_name   = "my-ssh-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = var.ssh_public_key
 }
 
 #ia ultima versiune de ubuntu
