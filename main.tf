@@ -129,11 +129,18 @@ resource "aws_instance" "ubuntu_instance" {
   }
 }
 
-resource "aws_s3_bucket" "dummy_bucket" {
-  bucket = "terraform-test-bucket-${random_id.suffix.hex}"
-  acl    = "private"
-}
-
+# Generează un sufix aleator pentru numele bucket-ului
 resource "random_id" "suffix" {
   byte_length = 4
+}
+
+# Creează bucket-ul S3 fără acl (argumentul acl e deprecated)
+resource "aws_s3_bucket" "dummy_bucket" {
+  bucket = "terraform-test-bucket-${random_id.suffix.hex}"
+}
+
+# Setează ACL separat
+resource "aws_s3_bucket_acl" "dummy_bucket_acl" {
+  bucket = aws_s3_bucket.dummy_bucket.id
+  acl    = "private"
 }
