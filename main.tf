@@ -129,4 +129,11 @@ resource "aws_instance" "ubuntu_instance" {
   }
 }
 
+resource "aws_s3_bucket" "dummy_bucket" {
+  bucket = "terraform-test-bucket-${random_id.suffix.hex}"
+  acl    = "private"
+}
 
+resource "random_id" "suffix" {
+  byte_length = 4
+}
