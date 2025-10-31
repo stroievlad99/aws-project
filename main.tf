@@ -135,12 +135,12 @@ resource "random_id" "suffix" {
 }
 
 # Creează bucket-ul S3 fără acl (argumentul acl e deprecated)
-resource "aws_s3_bucket" "dummy_bucket" {
+resource "aws_s3_bucket" "dummy_bucket_1" {
   bucket = "terraform-test-bucket-${random_id.suffix.hex}"
 }
 
 # Setează ACL separat
 resource "aws_s3_bucket_acl" "dummy_bucket_acl" {
-  bucket = aws_s3_bucket.dummy_bucket.id
+  bucket = aws_s3_bucket.dummy_bucket_1.id
   acl    = "private"
 }
