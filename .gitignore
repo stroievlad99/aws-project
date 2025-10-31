@@ -1,6 +1,9 @@
-# Ignoră folderele Terraform generate local
+# Terraform files to ignore
 .terraform/
-.terraform.lock.hcl
-terraform.tfstate
-terraform.tfstate.backup
-*.tfvars
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+terraform.tfvars
+
