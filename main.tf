@@ -141,9 +141,3 @@ resource "random_id" "suffix" {
 resource "aws_s3_bucket" "dummy_bucket" {
   bucket = "terraform-test-bucket-${random_id.suffix.hex}"
 }
-
-# Setează ACL separat
-resource "aws_s3_bucket_acl" "dummy_bucket_acl" {
-  bucket = aws_s3_bucket.dummy_bucket.id
-  acl    = "private"
-}
