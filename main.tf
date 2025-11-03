@@ -85,6 +85,13 @@ resource "aws_security_group" "public_sg" {
     cidr_blocks = ["0.0.0.0/0"]   # HTTPS de oriunde
   }
 
+  ingress {
+    from_port   = 30080
+    to_port     = 30080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # adding 30080 port for k3s
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
