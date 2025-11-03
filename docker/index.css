@@ -1,0 +1,190 @@
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    
+
+}
+
+body{
+    background:lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.ContainerCV{
+    position:relative;
+    width:100%;
+    max-width: auto;
+    min-height: auto;
+    margin:50px;
+    background: #fff;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.2);
+}
+@media (max-width:700px)
+{
+    .ContainerCV
+    {
+        margin:10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+    .left-side{
+        position:relative;
+        background: #fff;
+        padding:40px;
+
+    }
+        .Title h1{
+            margin-bottom: 15px;
+        }
+        .Title h2{
+            color:#03a9f4;
+            margin-top:0;
+        }
+        .About h3{
+            color:#03a9f4;
+            margin-top:40px;
+        }
+        h3{
+            color:#03a9f4;
+        }
+                .Time{
+                    color:rgb(87, 95, 103);
+                    font-style: italic;
+                    
+                }
+            .JobItem{
+                margin-bottom: 0;
+            }
+                .TimeNOC {
+                    margin-bottom: -30px;
+                    color:lightslategrey;
+                    }
+                    .indent{
+                        text-indent: 10px;
+                    }
+    .right-side{
+        position:relative;
+        background: #003147;
+        padding:40px;
+        color:#fff;
+  
+
+    }
+        .Contact{
+            padding-top:auto;          
+            line-height: 1.5rem;
+            display:grid;
+               
+        }
+        .Contact h3{
+            margin-left:-10px;
+        }
+            .Contact ul{
+                position:relative;  
+                font-size:14px;
+                margin-top:-5px;
+                /* margin-left:-15px; */
+
+            }
+                .Contact ul li{
+                    position:relative;
+                    list-style: none;
+                    margin:10px -40px;
+                    font-weight: 300;
+                }
+                .Contact ul li .icon{
+                    display:inline-block;
+                    width: 20px;
+                    font-size:15px;
+                    color:#03a9f4;
+                    /* align-items: center; */
+                }
+        .ComputerSkillsContainer{
+            font-weight:600;
+            margin-left:-10px;
+        }
+            .ComputerSkillsContainer ul{
+                margin-left:-15px;
+            }
+        .LanguagesContainer{
+            font-weight:600;
+            margin-left:-10px;
+            margin-top:20px;
+        }
+            .LanguagesContainer ul {
+                margin-left:-15px;
+                
+            }
+                .LanguagesContainer ul li{
+                    margin-top:20px;
+                }
+        .LanguagesContainer .percent{
+            position:relative;
+            width:100%;
+            height: 6px;
+            background:#081921;
+            display:block;
+            margin-top: 5px;
+
+        }
+            .LanguagesContainer .percent div{
+               position:absolute; 
+               top:0;
+               left:0;
+               height:100%;
+               background: #03a9f4;
+            }
+        .ComputerSkillsContainer .percent {
+            position:relative;
+            width:100%;
+            height: 6px;
+            background:#081921;
+            display:block;
+            margin-top: 5px;
+        }
+            .ComputerSkillsContainer .percent div{
+                position:absolute; 
+                top:0;
+                left:0;
+                height:100%;
+                background: #03a9f4;
+            }
+        .InterestsContainer{
+            font-weight:600;
+            margin-left:-10px;
+            margin-top:20px;
+        }
+            .InterestsContainer ul{
+                margin-left:-30px;
+                
+            }
+                .InterestsContainer ul li{
+                    list-style: none;
+                    margin-bottom: 10px;
+                    
+                }
+
+          
+                .InterestsContainer ul li .icon{
+                    display:inline-block;
+                    width: 20px;
+                    font-size:15px;
+                    color:#03a9f4;
+                
+                    
+                }
+
+                ul.AdditionalEducationContainer li.AditionalEducationItem p.data_curs {
+                    margin-top: 3px; /* Eliminarea marginii superioare pentru a lipi paragraful de elementul <a> */
+                }
